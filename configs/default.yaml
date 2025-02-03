@@ -1,0 +1,12 @@
+description: Generated through flow launcher
+name: superfresh
+window:
+  tabs:
+  - directory: C:\Users\samue\AppData\Roaming\FlowLauncher\Plugins\terminal-profiles\configs
+    profile: PowerShell
+    splits:
+    - direction: vertical
+      size: 0.5
+    - direction: horizontal
+      size: 0.3
+

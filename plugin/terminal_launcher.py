@@ -8,6 +8,7 @@ from terminal_config_launcher import TerminalConfigLauncher
 
 logger = logging.getLogger(__name__)
 
+
 class TerminalLauncher(FlowLauncher):
     def __init__(self, plugindir: Path):
         self.configs_dir = plugindir / "configs"
@@ -72,7 +73,7 @@ class TerminalLauncher(FlowLauncher):
                         "method": "create_config",
                         "parameters": [str(query.lower())],
                     },
-                    }]
+                }]
 
     def launch_config(self, config_path: str, attach: bool = False):
         try:
@@ -84,7 +85,6 @@ class TerminalLauncher(FlowLauncher):
 
         except Exception as e:
             logger.exception(f"Error launching configuration: {e}")
-
 
     def create_config(self, config_name):
         new_config_path = self.configs_dir / f"{config_name}.yaml"
@@ -102,6 +102,10 @@ class TerminalLauncher(FlowLauncher):
                                     "direction": "vertical",
                                     "size": 0.5,
                                 },
+                                {
+                                    "direction": "horizontal",
+                                    "size": 0.3,
+                                },
                             ]
                         },
                     ]
@@ -115,15 +119,15 @@ class TerminalLauncher(FlowLauncher):
 
     def context_menu(self, data):
         return [
-                {
-                    "title": "Attach to Existing Window",
-                    "SubTitle": "Launch terminal in existing window",
-                    "IcoPath": "Images/app.png",
-                    "JsonRPCAction": {
-                        "method": "launch_config",
-                        "parameters": [data[0], True]
-                    }
-                },
+            {
+                "title": "Attach to Existing Window",
+                "SubTitle": "Launch terminal in existing window",
+                "IcoPath": "Images/app.png",
+                "JsonRPCAction": {
+                    "method": "launch_config",
+                    "parameters": [data[0], True]
+                }
+            },
             {
                 "title": "Open configs directory",
                 "SubTitle": "Open the folder containing terminal configurations",
