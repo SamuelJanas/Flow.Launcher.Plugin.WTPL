@@ -1,0 +1,13 @@
+{
+    "ID": "638ee5a4-60ed-4a72-9f61-776934003cca",
+    "ActionKeyword": "wtp",
+    "Name": "Windows Terminal Profile Launcher",
+    "Description": "Launch Windows Terminal with predefined configurations",
+    "Author": "Samuel Janas",
+    "Version": "0.1.0",
+    "Language": "python",
+    "Website": "https://github.com/SamuelJanas/Flow.Launcher.Plugin.WTPL",
+    "IcoPath": "Images/app.png",
+    "ExecuteFileName": "main.py"
+}
+
