@@ -38,10 +38,10 @@ class TerminalConfigLauncher:
 
                 tab_command = tab.get('command')
                 if tab_command:
-                    cmd.append(f'powershell -Command "{tab_command}"')
+                    cmd.append(f'powershell -NoExit -Command "{tab_command}"')
                 
                 splits = tab.get('splits', [])
-                for j, split in enumerate(splits):
+                for _, split in enumerate(splits):
                     cmd.append(';')
                     
                     # Determine split direction
