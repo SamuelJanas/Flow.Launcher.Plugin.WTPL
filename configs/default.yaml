@@ -1,12 +1,20 @@
-description: Generated through flow launcher
-name: default
+name: "Default Setup"
+description: "Demonstrates a possible terminal configuration option"
 window:
   tabs:
-  - directory: C:\Users\samue\AppData\Roaming\FlowLauncher\Plugins\terminal-profiles\configs
-    profile: PowerShell
-    splits:
-    - direction: vertical
-      size: 0.5
-    - direction: horizontal
-      size: 0.3
+    - profile: "PowerShell"
+      directory: "%USERPROFILE%"
+      title: "Development"
+      splits:
+        - direction: "vertical"
+          size: 0.5
+
+        - direction: "horizontal"
+          directory: "%USERPROFILE%"
+          size: 0.3
+
+
+    - profile: "PowerShell"
+      directory: "%USERPROFILE%"
+      title: "Tab 2"
 
